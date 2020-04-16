@@ -1,0 +1,72 @@
+<ActionBar>
+    <!-- 
+    Use the NavigationButton as a side-drawer button in Android
+    because ActionItems are shown on the right side of the ActionBar
+    -->
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!-- 
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label text="Settings"></Label>
+</ActionBar>
+<GridLayout class="page__content">
+<StackLayout orientation="vertical">
+    <Label text="CAUSE DE BLESSURES" textWrap="true" />
+    <FlexboxLayout flexDirection="row">
+        <!-- Use even flexGrow to achieve uniform grid -->
+        <StackLayout orientation="vertical">
+            <button flexGrow="1" text="1" backgroundColor="#FF0000" />
+            <Label text="Chute" textWrap="true" />
+        </StackLayout>
+        <StackLayout orientation="vertical">
+            <button flexGrow="1" text="1" backgroundColor="#FF0000" />
+            <Label text="Collision" textWrap="true" />
+        </StackLayout>
+        <StackLayout orientation="vertical">
+            <button flexGrow="1" text="1" backgroundColor="#FF0000" />
+            <Label text="Autres" textWrap="true" />
+        </StackLayout>
+    </FlexboxLayout>
+</StackLayout>
+
+<StackLayout orientation="vertical">
+    <Label text="TYPE DE BLESSURES" textWrap="true" />
+    <FlexboxLayout flexDirection="row">
+        <!-- Use even flexGrow to achieve uniform grid -->
+        <StackLayout orientation="vertical">
+            <button flexGrow="1" text="1" backgroundColor="#FF0000" />
+            <Label text="Genou" textWrap="true" />
+        </StackLayout>
+        <StackLayout orientation="vertical">
+            <button flexGrow="1" text="1" backgroundColor="#FF0000" />
+            <Label text="Jambe" textWrap="true" />
+        </StackLayout>
+        <StackLayout orientation="vertical">
+            <button flexGrow="1" text="1" backgroundColor="#FF0000" />
+            <Label text="Bras" textWrap="true" />
+        </StackLayout>
+    </FlexboxLayout>
+    <FlexboxLayout flexDirection="row">
+        <!-- Use even flexGrow to achieve uniform grid -->
+        <StackLayout orientation="vertical">
+            <button flexGrow="1" text="1" backgroundColor="#FF0000" />
+            <Label text="Tête" textWrap="true" />
+        </StackLayout>
+        <StackLayout orientation="vertical">
+            <button flexGrow="1" text="1" backgroundColor="#FF0000" />
+            <Label text="Autres" textWrap="true" />
+        </StackLayout>
+    </FlexboxLayout>
+    
+</StackLayout>
+</GridLayout>
+<!-- 
+
+    <Label class="page__content-icon fas" text="&#xf013;"></Label>
+    <Label class="page__content-placeholder" text="<!-- Page content goes here "></Label>
+</GridLayout> -->

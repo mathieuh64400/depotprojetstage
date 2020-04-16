@@ -1,0 +1,87 @@
+<ActionBar class="entete">
+    <!-- 
+    Use the NavigationButton as a side-drawer button in Android
+    because ActionItems are shown on the right side of the ActionBar
+    -->
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!-- 
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()" ios.position="left">
+    </ActionItem>
+    <Label text="PROFIL" color="black"></Label>
+
+</ActionBar>
+<ScrollView orientation="vertical">
+    <GridLayout class="page__content" backgroundColor="#3E3F32" rows="60,100,60,60,60,60,60,60" columns="*,*,*">
+
+
+        <GridLayout class="page__content" rows="50,50,50" columns="*,*,*">
+            <!-- <Label class="page__content-icon fas" text="&#xf002;"></Label> -->
+            <Label class="page__content-placeholder" text="Photo de PROFIL" row="0" colspan="3" color="black"
+                fontWeight="Bold"></Label>
+
+            <Image src="" row="1" column="1"></Image>
+                <label class="page__ content-placeholder" text="Changer votre photo de PROFIL " fontSize="20px"
+                    color="black" marginTop="0%" row="2" column="0" colspan="3" fontWeight="Bold" fontStyle="Italic">
+                </label>
+        </GridLayout>
+
+
+        <StackLayout class="form" marginTop="25%">
+    <label class="page__ content-placeholder" text="Mot de passe" fontSize="20px" color="black"marginTop="0%"
+   fontWeight="Bold" fontStyle="Italic">
+     </label>
+    <StackLayout class="input-field">
+      <TextField class="input" hint="Votre mot de passe actuel" ></TextField>
+    </StackLayout>
+  
+    <StackLayout class="input-field">
+      <TextField class="input"hint=" votre nouveau mot de passe" ></TextField>
+    </StackLayout>
+  
+    
+    <StackLayout class="input-field">
+      <TextField class="input"hint="Confirmez votre mot de passe" ></TextField>
+    </StackLayout>
+
+    <Button  backgroundColor="#0DF24D" color="#F8FD07"text="Valider" (tap)="submit()"></Button>
+  </StackLayout> 
+
+        <StackLayout class="form" marginTop="25%">
+    <label class="page__ content-placeholder" text="Mail" fontSize="20px" color="black"marginTop="0%"
+   fontWeight="Bold">
+     </label>
+    <StackLayout class="input-field">
+      <TextField class="input" hint="Votre e-mail actuel" ></TextField>
+    </StackLayout>
+  
+    <StackLayout class="input-field">
+      <TextField class="input"hint=" votre nouvel email" ></TextField>
+    </StackLayout>
+  
+    
+    <StackLayout class="input-field">
+      <TextField class="input"hint="Confirmez votre e-mail" ></TextField>
+    </StackLayout>
+
+    <Button  backgroundColor="#0DF24D" color="#F8FD07"text="Valider" (tap)="submit()"></Button>
+  </StackLayout> 
+
+    </GridLayout>
+</ScrollView>
+<BottomNavigation height="1900px">
+    <TabStrip>
+        <TabStripItem>
+            <Label col="0" text="&#xf05a;" class="nt-icon fas"></Label>
+        </TabStripItem>
+        <TabStripItem>
+            <Label col="1" text="&#xf041;" class="nt-icon fas"></Label>
+        </TabStripItem>
+        <TabStripItem>
+            <Label col="2" text="&#xf041;" class="nt-icon fas"></Label>
+        </TabStripItem>
+    </TabStrip>
+</BottomNavigation>

@@ -1,0 +1,35 @@
+<ActionBar class="fond2">
+    <!-- 
+    Use the NavigationButton as a side-drawer button in Android
+    because ActionItems are shown on the right side of the ActionBar
+    -->
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!-- 
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()" ios.position="left">
+    </ActionItem>
+    <Label text="Notification" color="white" textDecoration="UnderLine"></Label>
+
+</ActionBar>
+<ScrollView orientation="vertical">
+    <GridLayout class="page__content" backgroundColor="#EB1414" rows="30,10,30,10,40,40,40,40,40,200,10,10"columns="*,*">
+        <Label class="page__content-placeholder" text=""row="0" column="0" colspan="2"  color="white"fontWeight="Bold"></Label>
+      <StackLayout class="hr" row="1"colspan="2"></StackLayout> 
+      <Label class="page__content-placeholder" text="Notification N°1:  08/03/2020 15h35"fontStyle="italic"row="0" column="0" colspan="2"  color="white"fontWeight="Bold"></Label>
+       <Label class="page__content-placeholder" text="Notification N°1:  08/03/2020 15h35" class="notifheure"row="2" column="0"  color="white"fontWeight="Bold"></Label>
+       <StackLayout class="hr" row="3"colspan="2"></StackLayout> 
+       <Label class="page__content-placeholder" text="En raison de vents "  row="4" column="0" colspan="2" fontSize="25px" color="white"fontWeight="Bold"></Label>
+       <Label class="page__content-placeholder" text="violents sur le haut"  row="5" column="0" colspan="2" fontSize="25px" color="white"fontWeight="Bold"></Label>
+       <Label class="page__content-placeholder" text="du domaine skiable,"  row="6" column="0" colspan="2" fontSize="25px" color="white"fontWeight="Bold"></Label>
+       <Label class="page__content-placeholder" text="le télésiège du " row="7" column="0" colspan="2"  fontSize="25px" color="white"fontWeight="Bold"></Label>
+       <Label class="page__content-placeholder" text="SoumCouy a été fermé !"  row="8" column="0" colspan="2" fontSize="25px"color="white"fontWeight="Bold"></Label>
+       <Image row="9" colspan="2" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Fareskilt_42.PNG" ></Image>
+    <StackLayout class="hr" row="10"colspan="2"></StackLayout>
+    <StackLayout class="hr" row="11"colspan="2"></StackLayout>
+
+    </GridLayout>
+    
+</ScrollView>
